@@ -24,9 +24,10 @@ section DevDscr                     // Marks the location of the <FlashDevice> s
 
 После сборки прошивки, для использования загрузчика в JFlash надо создать xml файл с описанием. Полное описание доступно на странице [J-Link Device Support Kit](https://wiki.segger.com/J-Link_Device_Support_Kit). Файл с описанием надо расположить:
 
-| Windows | C:\Users\<USER>\AppData\Roaming\SEGGER\JLinkDevices |
-| Linux | $HOME/.config/SEGGER/JLinkDevices |
-
+```
+Windows: C:\Users\<USER>\AppData\Roaming\SEGGER\JLinkDevices
+Linux: $HOME/.config/SEGGER/JLinkDevices
+```
 Пример файла находится в папке JFlash. В данном случае target назван F407WQ25, а Flash Bank - "SPI Flash". Из JFlash можно протестировать чтение, стирание и запись во флеш. В прошивке включены отладочные сообщения в RTT, их можно смотреть во время работы с флеш памятью через JLinkRTTViewer.
 
 Кроме интерактивного режима, JFlash так же поддерживает работу из командной строки. Полное описание всех параметров в [J-Flash User guide](https://www.segger.com/downloads/flasher/UM08003). Пример загрузки файла во флеш из командной строки:
